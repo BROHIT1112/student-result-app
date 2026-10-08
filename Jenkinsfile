@@ -32,9 +32,9 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 sh '''
-                    rm -rf /var/lib/tomcat10/webapps/student-result
-                    rm -f /var/lib/tomcat10/webapps/student-result.war
-                    cp target/student-result.war /var/lib/tomcat10/webapps/
+                    sudo rm -rf /var/lib/tomcat10/webapps/student-result
+                    sudo rm -f /var/lib/tomcat10/webapps/student-result.war
+                    sudo cp target/student-result.war /var/lib/tomcat10/webapps/
                 '''
             }
         }
